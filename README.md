@@ -5,13 +5,14 @@ This project is an iOS lottery draw app built using **SwiftUI** and **Swift 6**,
 
 <img width="374" alt="Screenshot 2024-09-09 at 21 20 57" src="https://github.com/user-attachments/assets/6e5e1cd4-ac17-444a-9d2d-c73fc7d4841e">
 
-<img width="385" alt="Screenshot 2024-09-09 at 21 20 43" src="https://github.com/user-attachments/assets/9b898622-dc5b-4c03-9c1c-d3f48de31f1a">
+<img width="391" alt="Screenshot 2024-09-09 at 22 14 49" src="https://github.com/user-attachments/assets/9c84f007-da11-4bee-859a-894e06342c8d">
+
 
 ---
 
 ## Key Technologies Used
 
-### 1. Swift 6 (Beta)
+### 1. Swift 6
 
 The app is built using **Swift 6**, leveraging the following new features:
 
