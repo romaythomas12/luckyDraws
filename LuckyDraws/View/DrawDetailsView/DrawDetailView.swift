@@ -20,6 +20,10 @@ struct DrawDetailView: View {
                     .accessibilityElement(children: .combine)
                     .accessibilityLabel("Draw details for \(viewModel.gameName(for: draw)) on \(viewModel.drawDate(for: draw))")
                 
+                MyTicketsView(viewModel: MyTicketsViewModel(draw: draw))
+                    .padding(.horizontal, 20)
+                    .accessibilityLabel("Your tickets section")
+                
                 Spacer()
             }
             .padding(.top, 20)
