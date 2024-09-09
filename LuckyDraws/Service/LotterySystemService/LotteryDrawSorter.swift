@@ -12,9 +12,13 @@ protocol LotterySorterProtocol {
 
 struct LotteryDrawSorter: LotterySorterProtocol {
     static func sort(draws: [LotteryDrawProtocol]) -> [LotteryDraw] {
-        draws.compactMap { LotteryDraw(from: $0) }
-            .sorted { $0.drawDate < $1.drawDate }
-    }
+         let groupedDraws = Dictionary(grouping: draws.compactMap { LotteryDraw(from: $0) }) { draw -> LotteryType in
+             draw.lotteryType ?? .lotto
+         }
+
+         return groupedDraws
+             .sorted { $0.key.rawValue < $1.key.rawValue }
+             .flatMap { $0.value.sorted { $0.drawDate < $1.drawDate } }      }
 
     static func sortNumbers(in draw: LotteryDrawProtocol) -> [String] {
         return sortStrings([draw.number1, draw.number2, draw.number3, draw.number4, draw.number5, draw.number6])
