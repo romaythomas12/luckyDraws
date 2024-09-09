@@ -11,7 +11,8 @@ import SwiftUI
 struct LuckyDrawsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let viewModel = LotteryViewModel(service: LotteryServiceDataProvider())
+            DrawsView(viewModel: viewModel)
         }
     }
 }
