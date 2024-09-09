@@ -67,6 +67,7 @@ struct DrawDetailView: View {
 
     private var numberBallsSection: some View {
         HStack(spacing: 8) {
+            Spacer()
             ForEach(viewModel.sortedNumbers(for: draw), id: \.self) { number in
                 CircleView(text: number, color: .blue)
                     .accessibilityLabel("Number \(number)")
@@ -76,6 +77,7 @@ struct DrawDetailView: View {
                 CircleView(text: bonus, color: .red)
                     .accessibilityLabel("Bonus ball \(bonus)")
             }
+            Spacer()
         }
     }
     

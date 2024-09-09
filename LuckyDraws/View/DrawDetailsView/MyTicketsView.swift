@@ -45,6 +45,7 @@ struct MyTicketsView: View {
                 .accessibilityLabel("Your ticket numbers")
 
             HStack(spacing: 8) {
+                Spacer()
                 ForEach(ticket.numbers, id: \.self) { number in
                     CircleView(text: "\(number)", color: viewModel.matchedNumbers.contains(number) ? .yellow : .blue)
                         .accessibilityLabel("Number \(number), \(viewModel.matchedNumbers.contains(number) ? "matched" : "not matched")")
@@ -97,7 +98,7 @@ extension MyTicketsView {
                 Circle()
                     .stroke(color, lineWidth: 1)
                     .background(Circle().foregroundColor(.white))
-                    .frame(width: 40, height: 40)
+                    .frame(width: 32, height: 32)
 
                 Text(text)
                     .font(.body.bold())
